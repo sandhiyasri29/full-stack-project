@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Course Review Platform</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #4e73df, #1cc88a);
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #4e73df;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    form {
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #4e73df;
+      outline: none;
+      box-shadow: 0 0 8px rgba(78,115,223,0.3);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #4e73df;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #2e59d9;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .course-list, .review-list {
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #f9f9f9;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .rating {
+      color: #f6c23e;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 Online Course Review Platform</h1>
+    <p>Share your learning experience & explore course reviews</p>
+  </header>
+
+  <div class="container">
+    <!-- Add Course Form -->
+    <h2>Add a New Course</h2>
+    <form>
+      <label for="title">Course Title:</label>
+      <input type="text" id="title" placeholder="Enter course title">
+
+      <label for="instructor">Instructor:</label>
+      <input type="text" id="instructor" placeholder="Enter instructor name">
+
+      <label for="category">Category:</label>
+      <select id="category">
+        <option>Programming</option>
+        <option>Data Science</option>
+        <option>AI & ML</option>
+        <option>Design</option>
+        <option>Business</option>
+      </select>
+
+      <label for="description">Description:</label>
+      <textarea id="description" rows="3" placeholder="Write short course description"></textarea>
+
+      <button type="submit">➕ Add Course</button>
+    </form>
+
+    <!-- Course List -->
+    <h2>Available Courses</h2>
+    <div class="course-list">
+      <div class="card">
+        <h3>Spring Boot 101</h3>
+        <p><strong>Instructor:</strong> Jane Doe</p>
+        <p><strong>Category:</strong> Programming</p>
+        <p><strong>Description:</strong> Beginner friendly course</p>
+        <p class="rating">⭐ Average Rating: 4.5 (10 reviews)</p>
+      </div>
+    </div>
+
+    <!-- Add Review Form -->
+    <h2>Add a Review</h2>
+    <form>
+      <label for="reviewer">Your Name:</label>
+      <input type="text" id="reviewer" placeholder="Enter your name">
+
+      <label for="rating">Rating:</label>
+      <select id="rating">
+        <option value="5">⭐ 5 - Excellent</option>
+        <option value="4">⭐ 4 - Good</option>
+        <option value="3">⭐ 3 - Average</option>
+        <option value="2">⭐ 2 - Poor</option>
+        <option value="1">⭐ 1 - Terrible</option>
+      </select>
+
+      <label for="comment">Comment:</label>
+      <textarea id="comment" rows="3" placeholder="Write your feedback"></textarea>
+
+      <button type="submit">💬 Submit Review</button>
+    </form>
+
+    <!-- Review List -->
+    <h2>Recent Reviews</h2>
+    <div class="review-list">
+      <div class="card">
+        <p><strong>Sandhiya</strong> (⭐ 5)</p>
+        <p>"Great course! Very easy to understand."</p>
+      </div>
+      <div class="card">
+        <p><strong>Keerthana</strong> (⭐ 4)</p>
+        <p>"Good course but could include more examples."</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Online Course Review Platform | Designed with ❤️</p>
+  </footer>
+</body>
+</html>
